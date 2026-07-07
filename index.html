@@ -127,12 +127,12 @@ section{padding:72px 0}
 .qchip{white-space:nowrap;border:1px solid rgba(218,165,32,.45);background:#fff;color:var(--ink);border-radius:100px;padding:12px 20px;font-weight:600;font-size:15px;box-shadow:0 6px 16px rgba(16,35,63,.05)}
 @media(prefers-reduced-motion:reduce){.qtrow{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
 .card,.spk,.bcard,.tcard,.tk{position:relative;overflow:hidden}
-.card:after,.spk:after,.bcard:after,.tcard:after,.tk:after{content:"";position:absolute;top:0;left:-65%;width:42%;height:100%;background:linear-gradient(105deg,transparent,rgba(218,165,32,.16) 50%,transparent);transform:skew(-15deg);animation:cardSheen 7s ease-in-out infinite;pointer-events:none;z-index:2}
+.card:after,.spk:after,.bcard:after,.tcard:after,.tk:after{content:"";position:absolute;top:0;left:-65%;width:42%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.6) 50%,transparent);transform:skew(-15deg);animation:cardSheen 7s ease-in-out infinite;pointer-events:none;z-index:2}
 .spk:nth-child(2n):after,.bcard:nth-child(3n):after,.tcard:nth-child(2n):after{animation-delay:1.6s}
 .spk:nth-child(3n):after,.tcard:nth-child(3n):after{animation-delay:3.1s}
 @keyframes cardSheen{0%{left:-65%}62%,100%{left:135%}}
 .grid3,.tgrid,.spkgrid{position:relative}
-.grid3:before,.spkgrid:before{content:"";position:absolute;inset:-6% -4%;background:radial-gradient(60% 50% at 50% 30%,rgba(218,165,32,.10),transparent 70%);pointer-events:none;z-index:0}
+.grid3:before,.spkgrid:before{content:"";position:absolute;inset:-6% -4%;background:radial-gradient(60% 50% at 50% 30%,rgba(218,165,32,.05),transparent 70%);pointer-events:none;z-index:0}
 @media(prefers-reduced-motion:reduce){.card:after,.spk:after,.bcard:after,.tcard:after,.tk:after{animation:none}}
 .egrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:760px){.egrid{grid-template-columns:1fr}}
 .eitem{display:flex;gap:16px;align-items:flex-start;padding:22px 24px}

@@ -29,10 +29,10 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink
 .hero .lead b{color:var(--ink)}
 .cta-row{display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap}
 .btn{display:inline-block;border:0;cursor:pointer;font-family:inherit;font-weight:700;font-size:16px;padding:17px 34px;border-radius:100px;text-decoration:none;background:linear-gradient(180deg,#e6c05a,#b8860b);color:#3a2c05;box-shadow:0 14px 30px rgba(184,134,11,.28);transition:transform .2s}
-.btn:hover{transform:translateY(-2px)}.btn.big{font-size:19px;padding:20px 50px;min-width:min(440px,92%);letter-spacing:.01em;animation:breath 2.6s ease-in-out infinite}@keyframes breath{0%,100%{box-shadow:0 14px 30px rgba(184,134,11,.28)}50%{box-shadow:0 14px 48px rgba(218,165,32,.6)}}
+.btn:hover{transform:translateY(-2px)}.cta-row{position:relative}.cta-row:before{content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:520px;height:180px;max-width:96%;background:radial-gradient(closest-side,rgba(218,165,32,.28),transparent);filter:blur(6px);pointer-events:none;animation:auraPulse 3s ease-in-out infinite}@keyframes auraPulse{0%,100%{opacity:.6}50%{opacity:1}}.btn.big{position:relative;font-size:19px;padding:20px 50px;min-width:min(440px,92%);letter-spacing:.01em;animation:breath 2.6s ease-in-out infinite}@keyframes breath{0%,100%{box-shadow:0 14px 34px rgba(184,134,11,.35)}50%{box-shadow:0 18px 56px rgba(218,165,32,.7)}}
 .mini-cd{color:var(--slate);font-size:13.5px;font-weight:600}.mini-cd b{color:var(--ink);font-family:'Cormorant';font-size:20px}
 .chips{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:14px 0 4px}
-.chips span{border:1px solid rgba(154,111,22,.35);color:var(--goldtext);font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:100px;background:rgba(255,255,255,.5)}
+.chips span{border:1px solid rgba(154,111,22,.4);color:var(--goldtext);font-size:14px;font-weight:700;padding:9px 18px;border-radius:100px;background:rgba(255,255,255,.65)}
 .dateline{color:var(--ink);font-weight:700;font-size:15px;margin:12px 0 3px}.dateline b{color:var(--goldtext)}.fomo{color:var(--slate);font-size:13px;font-weight:600;margin-top:6px}.fomo b{color:var(--gold-deep)}
 /* face wall (bright, in hero) */
 .wall{padding:30px 0 46px;background:linear-gradient(180deg,#f4ecdb,#faf7f0);overflow:hidden}
@@ -57,8 +57,8 @@ section{padding:72px 0}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}@media(max-width:820px){.grid3{grid-template-columns:1fr}}
 .pain{padding:28px}.pain h3{font-family:'Cormorant';color:var(--ink);font-size:25px;margin-bottom:8px}.pain p{color:#3c4a63;font-size:14.5px;line-height:1.6}
 /* leitgedanke — the ONE dark moment */
-.leit{background:radial-gradient(120% 120% at 50% 0%,#12233f,#0a1628 60%,#070f1e);color:#fff;text-align:center;padding:72px 0}
-.leit .q{font-family:'Cormorant';font-size:44px;line-height:1.24;max-width:880px;margin:0 auto;font-weight:600}
+.leit{background:radial-gradient(120% 120% at 50% 0%,#12233f,#0a1628 60%,#070f1e);color:#fff;text-align:center;padding:60px 0}
+.leit .q{font-family:'Cormorant';font-size:52px;line-height:1.22;max-width:920px;margin:0 auto;font-weight:600}
 .leit .s{color:#9fb0c8;font-size:15.5px;line-height:1.6;max-width:600px;margin:22px auto 0}
 @media(max-width:600px){.leit .q{font-size:30px}}
 /* themen */
@@ -136,11 +136,11 @@ section{padding:72px 0}
   <div class="ey">Deutschlands Zukunftsplattform im KI-Zeitalter</div>
   <h1>Wirkungskraft <span class="gold-txt">Mensch</span> im KI-Zeitalter</h1>
   <div class="sc">Werde unverwechselbar.</div>
-  <p class="lead">Wenn alle dieselben KI-Werkzeuge haben, entscheidet nur noch <b>eines</b>: dass man DICH sieht und dir vertraut. In 3 Tagen zeigen dir Macher aus <b>Mittelstand</b>, Coaching und Unternehmertum, wie du KI clever nutzt, sichtbar wirst und unverwechselbar bleibst.</p>
+  <p class="lead">KI beschleunigt fast alles, nur <b>eines</b> kann sie nicht: Vertrauen schaffen. Im KI-Zeitalter entscheidet, ob man dich <b>sieht</b>, ob du <b>auffindbar</b> bist und dir <b>vertraut</b> wird. Genau das lernst du hier, in 3 Tagen mit Machern aus <b>Mittelstand</b>, Coaching und Unternehmertum.</p>
   <div class="cta-row"><a class="btn big" href="#anmelden">Natürlich bin ich dabei! →</a></div>
   <div class="mini-cd" style="margin-top:12px">Kostenlos · Start in <b id="cd_d">0</b> Tagen · <b id="cd_h">0</b> Std</div>
   <div class="dateline">📅 <b>10.–12. November 2026</b> · 100 % online · Live &amp; kostenlos</div><div class="fomo">🔥 Begrenzte Live-Plätze · sei unter den <b>ersten 500</b> · verpass es nicht</div>
-  <div class="chips"><span>Coaches</span><span>Selbstständige</span><span>Mittelstand</span><span>Entscheider</span></div>
+  <div class="chips big"><span>Coaches</span><span>Selbstständige</span><span>Unternehmer</span><span>Start-ups</span><span>Mittelstand</span><span>Entscheider</span></div>
 </div></header>
 
 <section class="wall" style="padding-top:16px"><div class="wcap">Diese Menschen sind dabei, du gehörst dazu</div>
@@ -168,11 +168,11 @@ section{padding:72px 0}
 <section class="paper"><div class="wrap">
   <div class="sec-ey">Für Coaches · Selbstständige · Unternehmer</div>
   <h2 class="sec-h">Kennst du das?</h2>
-  <p class="sec-sub">Im KI-Zeitalter entscheidet nicht mehr nur, was du kannst, sondern ob man dich sieht und dir vertraut.</p>
+  <p class="sec-sub">Im KI-Zeitalter entscheidet nicht mehr nur, was du kannst, sondern ob man dich sieht, ob du auffindbar bist und dir vertraut wird.</p>
   <div class="grid3">
-    <div class="card pain"><h3>Du gehst unter</h3><p>Du bist richtig gut, aber in der Masse sieht dich kaum jemand.</p></div>
-    <div class="card pain"><h3>KI klingt wie alle</h3><p>Überall dieselben perfekten, austauschbaren Texte. Wo bleibt der Mensch?</p></div>
-    <div class="card pain"><h3>Kunden bleiben aus</h3><p>Sichtbarkeit ja, aber der Funke zum Kunden springt nicht über.</p></div>
+    <div class="card pain"><h3>Gesehen werden</h3><p>Du bist richtig gut, jetzt sollen dich endlich mehr Menschen finden.</p></div>
+    <div class="card pain"><h3>KI kann viel, aber nicht dich</h3><p>KI ist ein starkes Werkzeug. Doch Vertrauen entsteht nur durch den Menschen dahinter.</p></div>
+    <div class="card pain"><h3>Vertrauen gewinnen</h3><p>Zwischen sichtbar und gebucht liegt Vertrauen, das schaffst du mit Persönlichkeit.</p></div>
   </div>
 </div></section>
 
@@ -184,7 +184,7 @@ section{padding:72px 0}
 <section><div class="wrap">
   <div class="sec-ey">Die Themen</div><h2 class="sec-h">Was du mitnimmst</h2>
   <p class="sec-sub">Kein loses Wissen, sondern Ergebnisse, mit denen du ab morgen sichtbarer und unverwechselbarer wirst.</p>
-  <div class="tgrid"><div class="tcard"><div class="tct">Positionierung</div><div class="tcd">Klar sagen, wofür du stehst.</div></div><div class="tcard"><div class="tct">Stimme &amp; Wirkung</div><div class="tcd">Klingen wie du, nicht wie alle.</div></div><div class="tcard"><div class="tct">Storytelling</div><div class="tcd">Geschichten, die berühren &amp; verkaufen.</div></div><div class="tcard"><div class="tct">Marke</div><div class="tcd">Ein Auftritt, den man wiedererkennt.</div></div><div class="tcard"><div class="tct">Freebies</div><div class="tcd">Vertrauen verschenken, Kunden gewinnen.</div></div><div class="tcard"><div class="tct">Funnel-System</div><div class="tcd">Aus Interesse werden Kunden.</div></div><div class="tcard"><div class="tct">KI als Beschleuniger</div><div class="tcd">Schneller sichtbar, ohne austauschbar.</div></div><div class="tcard"><div class="tct">Führung &amp; Vertrieb</div><div class="tcd">Menschen gewinnen statt verkaufen.</div></div><div class="tcard"><div class="tct">Mittelstand &amp; Start-ups</div><div class="tcd">Etabliert &amp; jung, beide sichtbar.</div></div><div class="tcard"><div class="tct">Charisma &amp; Vertrauen</div><div class="tcd">Wirkung, der man folgt.</div></div></div>
+  <div class="tgrid"><div class="tcard"><div class="tct">Positionierung</div><div class="tcd">Du als Unikat auf dem Markt der Vergleichbarkeit.</div></div><div class="tcard"><div class="tct">Stimme &amp; Wirkung</div><div class="tcd">Deine Stimme, dein unaufhaltbares Marketinginstrument.</div></div><div class="tcard"><div class="tct">Storytelling</div><div class="tcd">Geschichten, die berühren und im Kopf bleiben.</div></div><div class="tcard"><div class="tct">Marke</div><div class="tcd">Dein Auftritt mit Wiedererkennungswert.</div></div><div class="tcard"><div class="tct">Freebies</div><div class="tcd">Wertvolles Wissen schenken, Vertrauen &amp; Kunden gewinnen.</div></div><div class="tcard"><div class="tct">Funnel-System</div><div class="tcd">Aus Interessenten werden Kunden, automatisiert.</div></div><div class="tcard"><div class="tct">KI als Beschleuniger</div><div class="tcd">Blick hinter die Kulissen, kostbare Inhalte zur Beschleunigung.</div></div><div class="tcard"><div class="tct">Führung &amp; Vertrieb</div><div class="tcd">Menschen gewinnen, statt Angst, ersetzt zu werden.</div></div><div class="tcard"><div class="tct">Mittelstand &amp; Start-ups</div><div class="tcd">Der Wandel im Unternehmen, echt gestaltet.</div></div><div class="tcard"><div class="tct">Charisma &amp; Vertrauen</div><div class="tcd">Wirkung, der man folgt und vertraut.</div></div></div>
 </div></section>
 
 <section class="paper"><div class="wrap">
